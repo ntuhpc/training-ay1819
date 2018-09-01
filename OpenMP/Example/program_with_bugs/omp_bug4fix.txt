@@ -1,0 +1,20 @@
+#!/bin/tcsh
+
+#******************************************************************************
+# FILE: omp_bug4fix
+# DESCRIPTION:
+#   This script is used to set the thread stack size limit to accomodate
+#   the omp_bug4 example. The example code requires @16MB per thread. For
+#   safety, this script sets the stack limit to 20MB. 
+# AUTHOR: Blaise Barney  01/12/04
+# LAST REVISED: 05/25/17
+#*****************************************************************************/
+
+# Increase the shell stack size just in case
+limit stacksize unlimited
+
+# Use the OpenMP stacksize environment variable
+setenv OMP_STACKSIZE "20 m"
+
+# Now call the executable - change the name to match yours
+omp_bug4
