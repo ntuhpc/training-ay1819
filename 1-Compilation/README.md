@@ -20,5 +20,24 @@ $ cd NTU-HPC-Training-AY18-19/1-Compilation
 ## Structure
 ex1: compile with g++ and optional flags \
 ex2: use macro to compile (only) the desired section of code \
-ex3: compile with g++ and Intel respectively, and compare their difference.
+ex3: compile with g++ and Intel respectively, and compare their performance difference.
 
+## Instruction
+
+### ex1:
+Try the following:
+```bash
+# serial hello world
+$ g++ hello_world.cpp -o hello
+$ ./hello
+
+# parallel hello world with OpenMP
+$ gcc -foepnmp omp_hello.c -o omp_hello
+$ ./omp_hello
+```
+
+### ex2:
+Try enabling different macros:
+```bash
+$ g++ macro_test.cpp -DUSE_MULTI
+```
