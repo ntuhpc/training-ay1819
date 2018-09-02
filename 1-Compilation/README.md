@@ -71,7 +71,8 @@ $ export OMP_NUM_THREADS=num_of_threads_you_want
 # then rerun the program. 
 ```
 
-### ex2:
+### ex2: Selective compilation with macros
+You can pass macro value to compiler, and compiler with use that value when doing preprocessing. 
 Try enabling different macros:
 ```bash
 $ g++ macro_test.cpp -o test_default
@@ -89,7 +90,7 @@ $ ./test_subs
 ```
 Also refer to SC'17 Example : [MrBayes](https://github.com/StevenShi-23/sc17-mrbayes/commit/36411af9ed18430a181f2efc8b54c2a902b3afb4), where we use macro to selectively compile code for AVX2/AVX512.
 
-### ex3:
+### ex3: Comparing GCC with Intel compiler
 compile with g++ and Intel respectively, and compare their performance difference:
 ```bash
 # loading intel compiler
