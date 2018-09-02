@@ -13,7 +13,8 @@ $ qsub -I -l select=1:ncpus=12 -P personal -l walltime=01:00:00
 3. Go to GitHub and search "NTU-HPC-Training-AY18-19"
 4. Copy the link and issue the following commands:
 ```bash
-$ git clone git@github.com:StevenShi-23/NTU-HPC-Training-AY18-19.git
+$ ssh nscc04-ib0
+$ git clone https://github.com/StevenShi-23/NTU-HPC-Training-AY18-19.git
 $ cd NTU-HPC-Training-AY18-19/1-Compilation
 ```
 
