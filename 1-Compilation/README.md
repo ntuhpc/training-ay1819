@@ -13,6 +13,7 @@ $ qsub -I -l select=1:ncpus=12 -P personal -l walltime=01:00:00
 3. Go to GitHub and search "NTU-HPC-Training-AY18-19"
 4. Copy the link and issue the following commands:
 ```bash
+# ssh into nscc04, this node got network
 $ ssh nscc04-ib0
 $ git clone https://github.com/StevenShi-23/NTU-HPC-Training-AY18-19.git
 $ cd NTU-HPC-Training-AY18-19/1-Compilation
@@ -33,12 +34,28 @@ $ g++ hello_world.cpp -o hello
 $ ./hello
 
 # parallel hello world with OpenMP
-$ gcc -foepnmp omp_hello.c -o omp_hello
+$ gcc -fopenmp omp_hello.c -o omp_hello
 $ ./omp_hello
 ```
 
 ### ex2:
 Try enabling different macros:
 ```bash
-$ g++ macro_test.cpp -DUSE_MULTI
+$ g++ macro_test.cpp -DUSE_MULTI -o test
+$ ./test
+```
+
+### ex3:
+compile with g++ and Intel respectively, and compare their performance difference:
+```bash
+# loading intel compiler
+$ module avail intel
+$ module load intelcc
+# compile cpp file on intel compiler
+$ icc pi.cpp -o inteltest
+#compile cpp file on gnu compiler
+$ g++ pi.cpp -o gnutest
+# run 
+$ ./inteltest
+$ ./gnutest
 ```
