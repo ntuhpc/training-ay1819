@@ -21,11 +21,11 @@ int main ()
     }
     pi = step * sum;
     std::cout.precision(20);
-    std::cout<<"Pi = "<< pi <<std::endl;
+    std::cout << "Pi = " << pi << std::endl;
 
     clock_t end = clock();
     double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
-    printf("Elapsed CPU time is %f\n",time_spent);
+    std::cout << "Elapsed CPU time is " << time_spent << std::endl;
 
     return 0;
 }
