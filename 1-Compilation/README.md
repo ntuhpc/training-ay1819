@@ -46,6 +46,7 @@ $ ./test
 ```
 
 ### ex3:
+compile with g++ and Intel respectively, and compare their performance difference:
 ```bash
 # loading intel compiler
 $ module avail intel
