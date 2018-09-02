@@ -32,7 +32,7 @@ $ g++ hello_world.cpp -o hello
 $ ./hello
 
 # parallel hello world with OpenMP
-$ gcc -foepnmp omp_hello.c -o omp_hello
+$ gcc -fopenmp omp_hello.c -o omp_hello
 $ ./omp_hello
 ```
 
