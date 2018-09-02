@@ -3,8 +3,9 @@ This folder contains the sample code for training on compilation.
 
 ## Preparation
 1. Login to NSCC with NTU account
-2. Request an interactive queue of 1h with 12 CPU cores
+2. Submit an interactive job request of 1h with 12 CPU cores
 ```bash
+# this command may take a while
 $ qsub -I -l select=1:ncpus=12 -P personal -l walltime=01:00:00
 ```
 3. Go to GitHub and search "NTU-HPC-Training-AY18-19"
