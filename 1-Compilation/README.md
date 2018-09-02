@@ -1,9 +1,6 @@
 ## Introduction
 This folder contains the sample code for training on compilation.
 
-## Pre-req
-If you are running with Mac: 
-
 ## Preparation
 1. Login to NSCC with NTU account
 2. Request an interactive queue of 1h
