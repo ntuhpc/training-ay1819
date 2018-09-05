@@ -126,7 +126,7 @@ The configuration scripts that Autoconf produces are by convention called `confi
 2. Submit an interactive job request of 1h with 12 CPU cores
 ```bash
 # this command may take a while
-$ qsub -I -l select=1:ncpus=12 -P personal -l walltime=01:00:00
+$ qsub -I -l select=1:ncpus=12 -P personal -l walltime=01:30:00
 ```
 3. After the job starts, issue the following commands *if you do have a copy of this repo on NSCC* (otherwise, go to step 4):
 ```bash
@@ -153,7 +153,10 @@ $ tar zxvf mrbayes-3.2.6.tar.gz && cd mrbayes-3.2.6/src
 
 # config the build
 $ autoconf
-$ ./configure --enable-mpi=yes --with-beagle=/path/to/just/above/beagle-lib --prefix=/path/to/your/MrBayes CC=mpiicc CXX=icpc
+
+# load intel compiler
+$ module load intelcc
+$ ./configure --enable-mpi=yes --without-beagle --prefix=/path/to/your/MrBayes CC=mpiicc CXX=icpc
 
 # build MrBayes in parallel. Can also set a value to -j like -j8
 $ make install -j
