@@ -6,9 +6,9 @@ If you wish to request the slides, please email Ziji : zshi005@e.ntu.edu.sg
 # Training Schedule
 The following is the tentative training schedule of NTU HPC during Academic Year 2018-2019. 
 
-0 - Linux Basics \
-1 - Compilation \
-2 - Build System \
+0 - [Linux Basics](https://github.com/StevenShi-23/NTU-HPC-Training-AY18-19/tree/master/0-Linux_Basics) \
+1 - [Compilation](https://github.com/StevenShi-23/NTU-HPC-Training-AY18-19/tree/master/1-Compilation) \
+2 - [Build System](https://github.com/StevenShi-23/NTU-HPC-Training-AY18-19/tree/master/2-Build_System) \
 3 - Libraries \
 4 - Compiler Optimization \
 5 - Parallel Programming Models \
