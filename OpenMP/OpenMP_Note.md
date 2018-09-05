@@ -1,6 +1,9 @@
 # Why OpenMP
 
-- Syntax is easy yet effective
+- Syntax is easy to pickup
+- Almost linear scaling
+
+# Reference
 
 ## Existing native parallel solutions in C and Fortran
 
@@ -67,23 +70,23 @@ $ gcc -fopenmp omp_hello.c -o hello
 
 
 
-\> Note 1：You can set the number of threads visible to OpenMP by
+> Note 1：You can set the number of threads visible to OpenMP by
 
 `
 
-$ export OMP\_NUM\_THREADS=num\_of\_threads\_you\_want
+$ export OMP_NUM_THREADS=num_of_threads_you_want
 
 `
 
-\> Note 2: Note the difference between \
+> Note 2: Note the difference between \
 
-` omp\_get\_num_threads(); // get thread ID
+` omp_get_num_threads(); // get thread ID
 
-omp\_get\_num_threads(); // get total number of threads
+omp_get_num_threads(); // get total number of threads
 
 `
 
-Q1: why we need \`\`\`nthreads, tid\`\`\` to be \`\`\`private\`\`\`?
+Q1: why we need `nthreads, tid` to be `private` ?
 
 Q2: Try \`\`\`OMP\_NUM\_THREADS=1000\`\`\` and let elapsed time be t1; try \`\`\`OMP\_NUM\_THREADS=10000\`\`\` and let elapsed time to be t2 on NSCC (note that machine has 24 threads). Do you observe any difference between 10xt1 and t2?
 
