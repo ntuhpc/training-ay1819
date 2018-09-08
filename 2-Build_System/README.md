@@ -5,6 +5,10 @@ Build systems are software tools designed to automate the process of program com
 * configure
 * scons
 
+# Flow Diagram of GNU Build System
+![alt text](https://upload.wikimedia.org/wikipedia/commons/8/84/Autoconf-automake-process.svg)
+
+
 # Build System Philosophy
 At their core, build systems are a functional based languages mapping a set of source resources (in most cases, files) to a target (executable). The primary assumption of the build system is _each invocation of a build command with the same input and options will create the same output_. This assumption allows the build system to *memoize the actions that is has already performed, and only perform build actions on resources that have changed*.
 
@@ -119,10 +123,6 @@ The configuration scripts that Autoconf produces are by convention called `confi
     --with-lapack-lib=/path/to/lapack/lib/libscalapack.a \
     --with-cc=mpicc --with-cxx=mpicxx --with-fc=mpif90
 ```
-
-# Flow Diagram of GNU Build System
-![alt text](https://upload.wikimedia.org/wikipedia/commons/8/84/Autoconf-automake-process.svg)
-
 
 # Preparation
 1. Login to NSCC with NTU account
