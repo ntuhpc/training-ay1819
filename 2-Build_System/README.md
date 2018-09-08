@@ -120,10 +120,13 @@ The configuration scripts that Autoconf produces are by convention called `confi
     --with-cc=mpicc --with-cxx=mpicxx --with-fc=mpif90
 ```
 
+# Flow Diagram of GNU Build System
+![alt text](https://upload.wikimedia.org/wikipedia/commons/8/84/Autoconf-automake-process.svg)
+
 
 # Preparation
 1. Login to NSCC with NTU account
-2. Submit an interactive job request of 1h with 12 CPU cores
+2. Submit an interactive job request of 1.5h with 12 CPU cores
 ```bash
 # this command may take a while
 $ qsub -I -l select=1:ncpus=12 -P personal -l walltime=01:30:00
@@ -147,18 +150,25 @@ We will use MrBayes as an example to illustrate the use of build system.
 # download source code
 $ wget https://github.com/NBISweden/MrBayes/archive/v3.2.6.tar.gz
 
-# prepare directory
-$ tar zxvf v3.2.6.tar.gz && cd MrBayes-3.2.6
+# prepare directory and go to source code directory
+$ tar zxvf v3.2.6.tar.gz 
+$ cd MrBayes-3.2.6
 $ tar zxvf mrbayes-3.2.6.tar.gz && cd mrbayes-3.2.6/src
 
+# load intel compiler and mpi library
+$ module load intelcc intelmpi
+```
+Then take a look at `Makefile.in`.
+```
 # config the build
 $ autoconf
+```
+Notice that 4 new files are generated, namely `autom4te.cache`(storing additional info for future use), `configure`(created by `autoconf`), `gpl.txt`(license), and `config.h.in`. Take a look at them, think about the relationship with help of the chart above before proceeding.
+```
+$ mkdir install
+$ ./configure --enable-mpi=yes --without-beagle --prefix=/path/to/your/MrBayes/install CC=mpiicc CXX=icpc
 
-# load intel compiler
-$ module load intelcc
-$ ./configure --enable-mpi=yes --without-beagle --prefix=/path/to/your/MrBayes CC=mpiicc CXX=icpc
-
-# build MrBayes in parallel. Can also set a value to -j like -j8
+# build MrBayes in parallel. may also set a value to -j like -j8
 $ make install -j
 ```
 
