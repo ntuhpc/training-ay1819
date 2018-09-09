@@ -82,7 +82,7 @@ Example taken from ISC'18 application [Nektar++](https://gitlab.nektar.info/nekt
 Here comes some examples:
 
 ## Make
-[Make](http://www.gnu.org/software/make/) allows for explicit mapping between source and target (foo.o: foo.c), as well as general mappings (%.o: %.c). Make also allows for "phony" target, which where the command executed does not actually create the target. This allows Makefiles to perform additional functionality. Here is the simple hello example in GNU Make:
+[Make](http://www.gnu.org/software/make/) allows for explicit mapping between target files and source files/dependencies (foo.o: foo.c), as well as general mappings (%.o: %.c). Make also allows for "phony" target, which where the command executed does not actually create the target. This allows Makefiles to perform additional functionality. Here is the simple hello example in GNU Make:
 
 ```bash
 OBJS=hello.o hello_io.o
@@ -94,6 +94,10 @@ hello: $(OBJS)
 %.o: %.c
     $(CC) -c $<
 ```
+
+RESOURCE: 
+- A more [gentle introduction](http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/) to Makefile.
+- Why using [Phony Target](https://www.gnu.org/software/make/manual/html_node/Phony-Targets.html)
 
 ## Scons
 
