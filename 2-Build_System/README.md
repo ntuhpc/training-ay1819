@@ -139,7 +139,7 @@ $ qsub -I -l select=1:ncpus=12 -P personal -l walltime=01:30:00
 ```bash
 # ssh into nscc04 
 $ ssh nscc04-ib0
-$ git clone https://github.com/StevenShi-23/NTU-HPC-Training-AY18-19.git
+$ git clone https://github.com/ntuhpc/training-ay1819.git
 ```
 4. Go to directory for this workshop
 ```bash
