@@ -6,24 +6,35 @@ If you wish to request the slides, please email Ziji : zshi005@e.ntu.edu.sg
 # Training Schedule
 The following is the tentative training schedule of NTU HPC during Academic Year 2018-2019. 
 
-0 - [Linux Basics](https://github.com/StevenShi-23/NTU-HPC-Training-AY18-19/tree/master/0-Linux_Basics) \
-1 - [Compilation](https://github.com/StevenShi-23/NTU-HPC-Training-AY18-19/tree/master/1-Compilation) \
-2 - [Build System](https://github.com/StevenShi-23/NTU-HPC-Training-AY18-19/tree/master/2-Build_System) \
-3 - [Libraries and Debugger](https://github.com/StevenShi-23/NTU-HPC-Training-AY18-19/tree/master/3-Libraries_and_Debugger) \
-4 - Compiler Optimization \
-5 - Parallel Programming Models \
-6 - Profiling \
-7 - Runtime Tuning \
-8 - HPC Cluster Configuration \
-9 - Hardware \
-10 - GPU \
-11 - Code Optimization \
-12 - OpenMP \
-13 - MPI \
-14 - CUDA \
-15 - Case Study
+0 - [Linux Basics](https://github.com/ntuhpc/training-ay1819/tree/master/0-Linux_Basics) \
+1 - [Compilation](https://github.com/ntuhpc/training-ay1819/tree/master/1-Compilation) \
+2 - [Build System](https://github.com/ntuhpc/training-ay1819/tree/master/2-Build_System) \
+3 - [Libraries and Debugger](https://github.com/ntuhpc/training-ay1819/tree/master/3-Libraries_and_Debugger) \
+4 - Parallel Programming Models \
+5 - OpenMP (Part 1) \
+6 - OpenMP (Part 2) \
+7 - Profiling and Runtime Tuning \
+8 - HPC Cluster Configuration and Hardware \
+9 - Review on Optimizations \
+========semester break===========\
+10 - GPU and CUDA (Part 1) \
+11 - CUDA (Part 2) \
+12 - MPI (Part 1) \
+13 - MPI (Part 2) \
+14 - Distribited Tensorflow and Optimization\
+15 - Case Study\
+16 - Case Study\
+17 - Case Study\
+18 - Case Study
+
+# Team Communication
+* Official Website : [ntuhpc.org](https://ntuhpc.org/)
+* Join our Slack for weekly training [here](https://ntuhpc-workshops.slack.com/)!
+* Follow us on Twitter [@realntuhpc](https://twitter.com/realntuhpc?lang=en)
 
 # Acknowledgement
-The slides are first authored by Liu Siyuan [@koallen](https://github.com/koallen), edited by Shi Ziji [@StevenShi-23](https://github.com/StevenShi-23).
+The slides are authored by God of A [@koallen](https://github.com/koallen), Boss Shao [@Allen-Shao](https://github.com/Allen-Shao), Prof. Lu [@lushl9301](https://github.com/lushl9301), Steven [@StevenShi-23](https://github.com/StevenShi-23).
+
+Please feel free to fork and PR to this repo :smiley:
 
 Credits to [NSCC](https://www.nscc.sg/) for sharing their optimization training materials with us.
