@@ -5,8 +5,8 @@ double inner(double *a, double *b, int n);
 
 main()
 {
-    int i, j;
-    double a[2][2], r;
+    int i=0, j=0;
+    double a[2][2], r=0.0;
     for(i=0; i<2; i++) {
         printf("Vector %d:\n", (i+1));
         printf("1st element:");

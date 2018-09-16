@@ -20,6 +20,6 @@ void count(FILE *fp, int *size)
 	*size=0;
 	double c;
 	while( fscanf(fp, "%lf", &c)!=EOF ) {
-		*(size)++;
+		(*size)++;
 	}
 }
