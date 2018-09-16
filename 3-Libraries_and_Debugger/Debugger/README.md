@@ -3,11 +3,7 @@
 ## Preparation 
 Please read [this post](../reference/gdb-tutorial-handout.pdf) for an introduction to GDB.
 
-## ex1 : find the bug
-
-
-## Cheatsheet of common commands in GDB
-
+# Cheatsheet of common commands in GDB
 
 ### Breakpoint
 * `b` - Put a breakpoint at the current line
@@ -20,7 +16,7 @@ Please read [this post](../reference/gdb-tutorial-handout.pdf) for an introducti
 
 
 ### Conditional Breakpoint
-(gdb) break file1.c:6 if i >= ARRAYSIZE
+* `(gdb) break file1.c:6 if i >= ARRAYSIZE` - place condition at the end 
 
 * `d N` - delete breakpoint number N
 * `info break` - list breakpoints
@@ -33,7 +29,7 @@ Please read [this post](../reference/gdb-tutorial-handout.pdf) for an introducti
 * `s N` - run the next N lines of the program
 * `n` - like s, but don't step into functions
 
-### Examine code
+### List code section
 * `l <line number>` - list the surrounding code near `<line number>`
 * `list<filename>:<line number>`  - list the surrounding code near `<line number>` in `<filename>`
 * `list <function name>` - list the code of function
@@ -43,20 +39,14 @@ Please read [this post](../reference/gdb-tutorial-handout.pdf) for an introducti
 * `q` - Quit gdb
 
 ### Backtrace
-* `backtrace` - used for looking at the stack of your program
-
-## ex2 : find the logical bugs
-
-### 1. Inner Product of two vectors
-
-### 2. File I/O
+* `backtrace` - used for looking at the stack of your program at breakpoint
 
 # Preparation
 1. Login to NSCC with NTU account
-2. Submit an interactive job request of 2h with 4 CPU cores
+2. Submit an interactive job request of 1h with 4 CPU cores
 ```bash
 # this command may take a while
-$ qsub -I -l select=1:ncpus=4 -P personal -l walltime=2:00:00
+$ qsub -I -l select=1:ncpus=4 -P personal -l walltime=1:00:00
 ```
 3. After the job starts, issue the following commands *if you do have a copy of this repo on NSCC* (otherwise, go to step 4):
 ```bash
@@ -71,7 +61,32 @@ $ cd 3-Libraries_and_Debugger
 
 # Hands-on Session ：
 
+## ex1 : find the syntax bug 
+Hint : how to declare `std::set`?
+
+## ex2 : find the logical bugs
+
+### 1. Inner Product of two vectors
+```bash
+cd ./Debugger/ex2/inner_prod_debug.c
+gcc inner_prod_debug.c -g -o inner_prod
+./inner_prod
+```
+To debug with gdb, do
+```
+gdb inner_prod
+```
+
+### 2. File I/O
+```bash
+cd ./Debugger/ex2/file_cnt_debug.c
+gcc file_cnt_debug.c -g -o file_io
+./file_io
+```
+To debug with gdb, do
+```
+gdb file_io
+```
+
 # Acknowledgement
 [1] This sample code for ex2 is adopted from the [post](http://www.stat.purdue.edu/~liu105/STAT598G_lab/lab6.pdf). 
-
-by [Dan Williams](http://www.pyrento.net/), and [GNU Build System](https://www.gnu.org/software/autoconf/manual/autoconf.html#The-GNU-Build-System).
