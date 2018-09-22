@@ -43,6 +43,7 @@ mpicc all_avg.c -o all_avg
 ## Run
 
 ```bash
+# make sure np does not exceeds total number of cores on the machine
 mpirun -np 10 all_avg 
 ```
 
