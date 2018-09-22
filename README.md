@@ -10,7 +10,7 @@ The following is the tentative training schedule of NTU HPC during Academic Year
 1 - [Compilation](https://github.com/ntuhpc/training-ay1819/tree/master/1-Compilation) \
 2 - [Build System](https://github.com/ntuhpc/training-ay1819/tree/master/2-Build_System) \
 3 - [Libraries and Debugger](https://github.com/ntuhpc/training-ay1819/tree/master/3-Libraries_and_Debugger) \
-4 - Parallel Programming Models \
+4 - [Parallel Programming Models](https://github.com/ntuhpc/training-ay1819/tree/master/4-Parallel_Programming_Models) \
 5 - OpenMP (Part 1) \
 6 - OpenMP (Part 2) \
 7 - Profiling and Runtime Tuning \
