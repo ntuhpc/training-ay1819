@@ -28,7 +28,8 @@ Rank3                             └─────▶│15 16 17 18 19 ├─�
                                          └───────────────┘      └──┘                                   
 ```
 
-## Prepartions
+## Load Dependency
+After login to NSCC,
 
 ```bash
 module load openmpi
@@ -46,4 +47,7 @@ mpicc all_avg.c -o all_avg
 # make sure np does not exceeds total number of cores on the machine
 mpirun -np 10 all_avg 
 ```
+
+## Question
+* What happens if `np` is greater than the number of cores?
 
