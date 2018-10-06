@@ -150,13 +150,42 @@ a performance report from an exisiting MAP output file called profile.map, simpl
 
 
 # Hands-on : MrBayes
+## Get MrBayes
+```bash
+$ cd 5-Profiling/
+$ wget https://github.com/NBISweden/MrBayes/archive/v3.2.6.tar.gz
 
-* Change the CFLAG to the following:
+$ tar zxvf v3.2.6.tar.gz 
+$ cd MrBayes-3.2.6
+$ tar zxvf mrbayes-3.2.6.tar.gz && cd mrbayes-3.2.6
+$ mkdir install && cd src
+
+$ module load intelcc intelmpi
+
+$ autoconf
+$ ./configure --enable-mpi=yes --without-beagle --prefix=/path/to/your/MrBayes/install CC=mpiicc CXX=icpc
 ```
+
+## Configure makefile
+Change the CFLAG in `Makefile` to allow debug info to be exposed to profiler:
+```bash
 CFLAGS       = -O3  -DUSECONFIG_H -g
 ```
+then, compile MrBayes by:
+```bash
+$ make -j
+$ make install
+```
+
+## Configure profiling script
+
+* Change `your-username` in line 3 of mb_input.nex
+* Change `PBS_O_WORKDIR` in line 8 of job.sub
+
+## Start Arm Forge Client on your laptop
+![Alt text](./screenshot/remote-launch.jpg?raw=true "Remote Launch Window")
 
 * *Remote Installation Directory*: The full path to the Arm Forge installation on the remote system.
-* *Remote Script*: This optional script will be run before starting the remote daemon on the remote system. You may use this script to load the required modules for DDT and MAP, your MPI and compiler. See the following sections for more details. The script is usually not necessary when using Reverse Con- nect.
+* *Remote Script*: This optional script will be run before starting the remote daemon on the remote system. You may use this script to load the required modules for DDT and MAP, your MPI and compiler. See the following sections for more details. The script is usually not necessary when using Reverse Connect.
 
-* Always look for source files locally: Check this box to use the source files on the local system instead of the remote system.
+* *Always look for source files locally*: Check this box to use the source files on the local system instead of the remote system.

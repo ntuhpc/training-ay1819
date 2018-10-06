@@ -3,7 +3,7 @@
 #PBS -l select=1:ncpus=12:ompthreads=1
 #PBS -l walltime=01:00:00
 
-module load intelmpi intelcc allinea/forge allinea/reports
+module load intelmpi arm/forge/18.0 arm/reports/18.0
 
 export PBS_O_WORKDIR=/path/to/your/bin/mb
 
