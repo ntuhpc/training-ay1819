@@ -5,7 +5,7 @@
 
 module load intelmpi arm/forge/18.0 arm/reports/18.0
 
-export PBS_O_WORKDIR=/path/to/your/bin/mb
+export PBS_O_WORKDIR=/path/to/your/mb_binary
 
 cd $PBS_O_WORKDIR
 
