@@ -1,0 +1,9 @@
+begin mrbayes;
+        set autoclose=yes nowarn=no;
+        set dir=/home/users/ntu/your-username/training-ay1819/5-Profiling/data;
+        exe sc.nexus;
+        lset nst=6 rates=invgamma;
+        set usebeagle=yes beagledevice=cpu;
+        set beaglesse=yes beagleopenmp=yes beagleprecision=single;
+        mcmc nchains=6 nruns=2 ngen=100000 append=no samplefreq=1000 Temp=0.5 Checkfreq=20000;
+end;
