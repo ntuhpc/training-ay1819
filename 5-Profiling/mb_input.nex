@@ -1,6 +1,6 @@
 begin mrbayes;
         set autoclose=yes nowarn=no;
-        set dir=./data;
+        set dir=/home/users/ntu/your-username/training-ay1819/5-Profiling/data;
         exe sc.nexus;
         lset nst=6 rates=invgamma;
         set usebeagle=yes beagledevice=cpu;

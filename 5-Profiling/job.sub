@@ -1,0 +1,12 @@
+#!/bin/bash
+#PBS -P personal
+#PBS -l select=1:ncpus=12:ompthreads=1
+#PBS -l walltime=01:00:00
+
+module load intelmpi intelcc allinea/forge allinea/reports
+
+export PBS_O_WORKDIR=/path/to/your/bin/mb
+
+cd $PBS_O_WORKDIR
+
+mpirun -n 12 ./mb ~/training-ay1819/5-Profiling/mb_input.nex
