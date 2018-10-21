@@ -60,31 +60,30 @@ clang -fopenmp omp_hello.c -o hello
 
 ```
 
-```
-
 $ cd Example
 
 $ gcc -fopenmp omp_hello.c -o hello
 
 ./hello
-
+```
 
 
 > Note 1：You can set the number of threads visible to OpenMP by
 
-`
+```
 
 $ export OMP_NUM_THREADS=num_of_threads_you_want
 
-`
+```
 
 > Note 2: Note the difference between \
 
-` omp_get_num_threads(); // get thread ID
+` ``
+omp_get_num_threads(); // get thread ID
 
 omp_get_num_threads(); // get total number of threads
 
-`
+```
 
 Q1: why we need `nthreads, tid` to be `private` ?
 
@@ -138,7 +137,7 @@ Allowed thread to execute diff. block of code to be done concurently.
 
 Each section is executed once by a thread in the team.
 
-```c```
+```c
 #progma omp parallel
 ```
 
