@@ -47,7 +47,7 @@ c. Runtime Library Routines (e.g.: call runtime routine to determine the thread 
 
 4\. Synchronization construct (barrier, critical, atomic, locks, master (for sync.))
 
-\## How to compile
+## How to compile
 
 ```shell
 icc -qopenmp omp_hello.c -o hello
@@ -76,36 +76,34 @@ $ export OMP_NUM_THREADS=num_of_threads_you_want
 
 ```
 
-> Note 2: Note the difference between \
+> Note 2: Note the difference between
 
-` ``
+```
 omp_get_num_threads(); // get thread ID
-
 omp_get_num_threads(); // get total number of threads
-
 ```
 
 Q1: why we need `nthreads, tid` to be `private` ?
 
-Q2: Try \`\`\`OMP\_NUM\_THREADS=1000\`\`\` and let elapsed time be t1; try \`\`\`OMP\_NUM\_THREADS=10000\`\`\` and let elapsed time to be t2 on NSCC (note that machine has 24 threads). Do you observe any difference between 10xt1 and t2?
+Q2: Try `OMP_NUM_THREADS=1000` and let elapsed time be t1; try `OMP_NUM_THREADS=10000` and let elapsed time to be t2 on NSCC (note that machine has 24 threads). Do you observe any difference between 10xt1 and t2?
 
-\## OpenMP uses fork-join model
+## OpenMP uses fork-join model
 
-\* start as a single master thread on one core
+- start as a single master thread on one core
 
-\* continues as single thread until parallel construct
+- continues as single thread until parallel construct
 
-1\. Paralle region
+  - Paralle region
 
-\> Rule for fortran
+  - Rule for fortran
 
-a) no \`GOTO\` allowed
+    - no `GOTO` allowed
 
-b) STOP statements are okay
+    - STOP statements are okay
 
-> Rule for C/C++
+  - Rule for C/C++
 
-- Case sensitive
+    - Case sensitive
 
 - structure
 
@@ -117,11 +115,12 @@ b) STOP statements are okay
 
 - Must be a *DO* or *for* loop (not *DO WHILE*  or *WHILE* )
 
-- Avoid logical dependencies like ```DO A(i) = A(i-1)*2 ENDO```
+- Avoid logical dependencies like `DO A(i) = A(i-1)*2 ENDO`
 
 - Variable declared inside code block becomes "private" by default 
 
-- ```c
+
+```c
   # omp parallel for
   for (int i=0; i<100; ++i)
   {
@@ -129,7 +128,7 @@ b) STOP statements are okay
     // now i is a private to each work thread
   }
   
-  ```
+```
 
 ## Section Construct
 
@@ -149,27 +148,23 @@ Each section is executed once by a thread in the team.
 
 # OpenMP Clause
 
-- shared
+- `shared`
 
-- private
+- `private`
 
-- default
+- `default`
 
-- if
+- `if`
 
-- firstprivate, lastprivate
+- `firstprivate`, `lastprivate`
 
   - pass value to some certain threads
 
-- num_threads
+- `num_threads`
 
-- reductions
+- `reductions`
 
-- copyin
-
-## 
-
-
+- `copyin`
 
 
 
