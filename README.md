@@ -24,6 +24,9 @@ The following is the tentative training schedule of NTU HPC during Academic Year
 14 - Distribited Tensorflow and Optimization \
 15 - Case Study\
 16 - Case Study\
+17 - Infiniband\
+18 - compile WRF\
+19 - data visualization with ParaView (invite Hailin) 
 
 # Team Communication
 * Official Website : [ntuhpc.org](https://ntuhpc.org/)
