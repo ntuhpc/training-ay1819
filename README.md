@@ -6,6 +6,7 @@ If you wish to request the slides, please email Ziji : zshi005@e.ntu.edu.sg
 # Training Schedule
 The following is the tentative training schedule of NTU HPC during Academic Year 2018-2019. 
 
+Sem1 \
 0 - [Linux Basics](https://github.com/ntuhpc/training-ay1819/tree/master/0-Linux_Basics) \
 1 - [Compilation](https://github.com/ntuhpc/training-ay1819/tree/master/1-Compilation) \
 2 - [Build System](https://github.com/ntuhpc/training-ay1819/tree/master/2-Build_System) \
@@ -14,19 +15,18 @@ The following is the tentative training schedule of NTU HPC during Academic Year
 5 - [Profiling and Runtime Tuning](https://github.com/ntuhpc/training-ay1819/tree/master/5-Profiling) \
 6 - OpenMP (Part 1) \
 7 - OpenMP (Part 2) \
-8 - Review on Optimizations \
-========semester break===========\
-9 - Cluster Configuration and Hardware \
-10 - GPU and CUDA (Part 1) \
-11 - CUDA (Part 2) \
-12 - MPI (Part 1) \
-13 - MPI (Part 2) \
-14 - Distribited Tensorflow and Optimization \
-15 - Case Study\
-16 - Case Study\
-17 - Infiniband\
-18 - compile WRF\
-19 - data visualization with ParaView (invite Hailin) 
+8 - Review on Optimizations 
+
+
+Sem2\ 
+Week2 - Cluster Configuration and Hardware (including Infiniband) (Weiliang) \
+Week4 - MPI (Part 1) \
+Week5 - MPI (Part 2) \
+Week6 - GPU and CUDA (Part 1) \
+Week8 - CUDA (Part 2) \
+Week9 - Distribited Tensorflow and Optimization && Case Study Horovod (Cao Liu) \
+Week10 - Case Study WRF && everyone try to compile (Xinye) \
+Week11 - data visualization with ParaView (Hailin) 
 
 # Team Communication
 * Official Website : [ntuhpc.org](https://ntuhpc.org/)
