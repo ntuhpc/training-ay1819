@@ -1,4 +1,4 @@
-# Hands-on Session ：MrBayes
+# MrBayes Compilation
 MrBayes is a program for Bayesian inference and model choice across a wide range of phylogenetic and evolutionary models. MrBayes uses Markov chain Monte Carlo (MCMC) methods to estimate the posterior distribution of model parameters.
 
 We will use MrBayes as an example to illustrate the use of build system.
@@ -27,3 +27,9 @@ $ ./configure --enable-mpi=yes --without-beagle --prefix=/path/to/your/MrBayes/i
 # build MrBayes in parallel. may also set a value to -j like -j8
 $ make install -j
 ```
+
+# MrBayes Runtime
+```bash
+mpirun -np <n> /path/to/mb
+```
+Open this [tutorial](http://mrbayes.sourceforge.net/wiki/index.php/Tutorial_3.2)
