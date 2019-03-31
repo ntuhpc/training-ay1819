@@ -12,7 +12,7 @@ $ cd MrBayes-3.2.6
 $ tar zxvf mrbayes-3.2.6.tar.gz && cd mrbayes-3.2.6/src
 
 # load compiler and mpi library (use module load or manually add them to PATH and LD_LIBRARY_PATH)
-$ module load GCC OpenMPI
+$ module load gcc openmpi
 ```
 Then take a look at `Makefile.in`.
 ```
